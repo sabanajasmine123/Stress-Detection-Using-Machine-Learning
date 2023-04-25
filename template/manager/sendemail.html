@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <!--
+    /   Multipurpose: Free Template by FreeHTML5.co
+    /   Author: https://freehtml5.co
+    /   Facebook: https://facebook.com/fh5co
+    /   Twitter: https://twitter.com/fh5co
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Document title -->
+    <title>Multipurpose</title>
+    <!-- Stylesheets & Fonts -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CRajdhani:400,600,700"
+        rel="stylesheet">
+    <!-- Plugins Stylesheets -->
+    <link rel="stylesheet" href="{% static 'assets/css/loader/loaders.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/aos/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swiper/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/lightgallery.min.css' %}">
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+</head>
+
+<body>
+
+
+    <!-- Loader Start -->
+    <div class="css-loader">
+        <div class="loader-inner line-scale d-flex align-items-center justify-content-center"></div>
+    </div>
+    <!-- Loader End -->
+    <!-- Header Start -->
+    <header class="position-absolute w-100">
+        <div class="container">
+            <div class="top-header d-none d-sm-flex justify-content-between align-items-center">
+                <div class="contact">
+                    <a href="tel:+1234567890" class="tel"><i class="fa fa-phone" aria-hidden="true"></i>+1234567890</a>
+                    <a href="mailto:info@yourmail.com"><i class="fa fa-envelope"
+                            aria-hidden="true"></i>info@yourmail.com</a>
+                </div>
+                <nav class="d-flex aic">
+                    {% comment %} <a href="registration" class="login"><i class="fa fa-user" aria-hidden="true"></i>Register</a> {% endcomment %}
+                    <ul class="nav social d-none d-md-flex">
+                        <li><a href="https://www.facebook.com/fh5co" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand" href="index.html"><img src="{% static 'assets/images/logo.png' %}" alt="Multipurpose"></a>
+                <div class="group d-flex align-items-center">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span
+                            class="navbar-toggler-icon"></span></button>
+                    <a class="login-icon d-sm-none" href="#"><i class="fa fa-user"></i></a>
+                    <a class="cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+                </div>
+                <a class="search-icon d-none d-md-block" href="#"><i class="fa fa-search"></i></a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="mhome">Home</a></li>
+                        {% comment %} <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <li class="pull-right"><a class="nav-link" href="#">More options</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" data-hover=" ">one</a></li>
+                                <li><a href="3" data-hover=" ">two</a></li>
+                            </ul>
+                    </li> {% endcomment %}
+                    </ul>
+                    <form class="bg-white search-form" method="get" id="searchform">
+                        <div class="input-group">
+                            <input class="field form-control" id="s" name="s" type="text" placeholder="Search">
+                            <span class="input-group-btn">
+                                <input class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit"
+                                    value="Search">
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+
+
+    <div class="main-panel">        
+        <div class="content-wrapper">
+                <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Driver</h4>
+                  <p class="card-description">
+                    {% comment %} Basic form layout {% endcomment %}
+                  </p>
+                  <form class="forms-sample"  method="POST" action="" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">Name</label>
+                      <input type="text" class="form-control"value="{{owner.name}}" name="name"id="exampleInputUsername1" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email</label>
+                      <input type="email" class="form-control" value="{{owner.email}}" name="email"id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                    <div>
+                    <button type="submit" data-target="#send_mail" data-toggle="modal"
+                                    style="padding:15px;width:150px;margin:20px;" 
+                                    class="btn btn-info">Send Email</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+
+            <div id="send_mail" class="modal fade" role="dialog">
+                <div class="modal-dialog modal_large">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            
+                            <h4 class="modal-title"><center><b>Email sented successfully</b></center></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <script>
+                $(document).ready(function() {
+                $('table.multi-table').DataTable({
+                    "dom": "<'dt--top-section'<'row'<'col-12 col-sm-6 d-flex justify-content-sm-start justify-content-center'l><'col-12 col-sm-6 d-flex justify-content-sm-end justify-content-center mt-sm-0 mt-3'f>>>" +
+                "<'table-responsive'tr>" +
+                "<'dt--bottom-section d-sm-flex justify-content-sm-between text-center'<'dt--pages-count  mb-sm-0 mb-3'i><'dt--pagination'p>>",
+                    "oLanguage": {
+                        "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                        "sInfo": "Showing page PAGE of PAGES",
+                      
+                       "sLengthMenu": "Results :  MENU",
+                    },
+                    "stripeClasses": [],
+                    "lengthMenu": [7, 10, 20, 50],
+                    "pageLength": 7,
+                    drawCallback: function () {
+                        $('.t-dot').tooltip({ template: '<div class="tooltip status" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' })
+                        $('.dataTables_wrapper table').removeClass('table-striped');
+                    }
+                });
+                } );
+            </script>
+
+
+    <!-- Footer Start -->
+    <footer>
+        <!-- Widgets End -->
+        <!-- Foot Note Start -->
+        <div class="foot-note">
+            <div class="container">
+                <div
+                    class="footer-content text-center text-lg-left d-lg-flex justify-content-between align-items-center">
+                    <p class="mb-0" data-aos="fade-right" data-aos-offset="0">&copy; 2019 All Rights Reserved. Design by <a href="https://freehtml5.co/multipurpose" target="_blank" class="fh5-link">FreeHTML5.co</a>.</p>
+                    <p class="mb-0" data-aos="fade-left" data-aos-offset="0"><a href="#">Terms Of Use</a><a
+                            href="#">Privacy & Security
+                            Statement</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Foot Note End -->
+    </footer>
+    <!-- Footer Endt -->
+    <!--jQuery-->
+    <script src="{% static 'assets/js/jquery-3.3.1.js' %}"></script>
+    <!--Plugins-->
+    <script src="{% static 'assets/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'assets/js/loaders.css.js' %}"></script>
+    <script src="{% static 'assets/js/aos.js' %}"></script>
+    <script src="{% static 'assets/js/swiper.min.js' %}"></script>
+    <script src="{% static 'assets/js/lightgallery-all.min.js' %}"></script>
+    <!--Template Script-->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>

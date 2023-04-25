@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <!--
+    /   Multipurpose: Free Template by FreeHTML5.co
+    /   Author: https://freehtml5.co
+    /   Facebook: https://facebook.com/fh5co
+    /   Twitter: https://twitter.com/fh5co
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Document title -->
+    <title>Multipurpose</title>
+    <!-- Stylesheets & Fonts -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i%7CRajdhani:400,600,700"
+        rel="stylesheet">
+    <!-- Plugins Stylesheets -->
+    <link rel="stylesheet" href="{% static 'assets/css/loader/loaders.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/aos/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swiper/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/lightgallery.min.css' %}">
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+</head>
+
+<body>
+
+
+    <!-- Loader Start -->
+    <div class="css-loader">
+        <div class="loader-inner line-scale d-flex align-items-center justify-content-center"></div>
+    </div>
+    <!-- Loader End -->
+    <!-- Header Start -->
+    <header class="position-absolute w-100">
+        <div class="container">
+            <div class="top-header d-none d-sm-flex justify-content-between align-items-center">
+                <div class="contact">
+                    <a href="tel:+1234567890" class="tel"><i class="fa fa-phone" aria-hidden="true"></i>+1234567890</a>
+                    <a href="mailto:info@yourmail.com"><i class="fa fa-envelope"
+                            aria-hidden="true"></i>info@yourmail.com</a>
+                </div>
+                <nav class="d-flex aic">
+                    {% comment %} <a href="registration" class="login"><i class="fa fa-user" aria-hidden="true"></i>Register</a> {% endcomment %}
+                    <ul class="nav social d-none d-md-flex">
+                        <li><a href="https://www.facebook.com/fh5co" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand" href="index.html"><img src="{% static 'assets/images/logo.png' %}" alt="Multipurpose"></a>
+                <div class="group d-flex align-items-center">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span
+                            class="navbar-toggler-icon"></span></button>
+                    <a class="login-icon d-sm-none" href="#"><i class="fa fa-user"></i></a>
+                    <a class="cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+                </div>
+                <a class="search-icon d-none d-md-block" href="#"><i class="fa fa-search"></i></a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="mhome">Home</a></li>
+                        {% comment %} <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <li class="pull-right"><a class="nav-link" href="#">More options</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" data-hover=" ">one</a></li>
+                                <li><a href="3" data-hover=" ">two</a></li>
+                            </ul>
+                    </li> {% endcomment %}
+                    </ul>
+                    <form class="bg-white search-form" method="get" id="searchform">
+                        <div class="input-group">
+                            <input class="field form-control" id="s" name="s" type="text" placeholder="Search">
+                            <span class="input-group-btn">
+                                <input class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit"
+                                    value="Search">
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+    <section class="featured">
+        {% if pro.id %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right" data-aos-delay="400" data-aos-duration="800">
+                    <div class="title">
+                        <h6 class="title-primary">ABOUT MANAGER</h6>
+                        <h1 class="title-blue">{{pro.name}}</h1>
+                    </div>
+                    <a>Phone Number: +91 {{pro.phoneno}}</a><br><br>
+                    <a>Address: {{pro.address}}</a><br><br>
+                    <a>Qualification: {{pro.qualification}}</a><br><br>
+                    <a>Experience: {{pro.experience}}</a><br><br>
+                    <a>Password: {{pro.password}}</a><br><br>
+                    <div class="media-element d-flex justify-content-between">
+                        <div class="media">
+                            <i class="fa fa-magic mr-4"></i>
+                            <div class="media-body">
+                                <h5>Email</h5>
+                                {{pro.email}}
+                            </div>
+                        </div>
+                        <div class="media">
+                            <i class="fa fa-magic mr-4"></i>
+                            <div class="media-body">
+                                <h5>Department</h5>
+                                {{pro.department}}
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{% url 'meditprof' pro.id %}" class="btn btn-primary">Edit Profile</a>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="400" data-aos-duration="800">
+                    <div class="featured-img">
+                        <img class="featured-big" src="{{pro.image.url}}" style="height:520px; width:520px" alt="Featured 1">
+                        {% comment %} <img class="featured-small" src="{% static 'assets/images/featured-img2.jpg' %}"  alt="Featured 2"> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </section>
+
+
+
+
+    <!-- Footer Start -->
+    <footer>
+        <!-- Widgets End -->
+        <!-- Foot Note Start -->
+        <div class="foot-note">
+            <div class="container">
+                <div
+                    class="footer-content text-center text-lg-left d-lg-flex justify-content-between align-items-center">
+                    <p class="mb-0" data-aos="fade-right" data-aos-offset="0">&copy; 2019 All Rights Reserved. Design by <a href="https://freehtml5.co/multipurpose" target="_blank" class="fh5-link">FreeHTML5.co</a>.</p>
+                    <p class="mb-0" data-aos="fade-left" data-aos-offset="0"><a href="#">Terms Of Use</a><a
+                            href="#">Privacy & Security
+                            Statement</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Foot Note End -->
+    </footer>
+    <!-- Footer Endt -->
+    <!--jQuery-->
+    <script src="{% static 'assets/js/jquery-3.3.1.js' %}"></script>
+    <!--Plugins-->
+    <script src="{% static 'assets/js/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'assets/js/loaders.css.js' %}"></script>
+    <script src="{% static 'assets/js/aos.js' %}"></script>
+    <script src="{% static 'assets/js/swiper.min.js' %}"></script>
+    <script src="{% static 'assets/js/lightgallery-all.min.js' %}"></script>
+    <!--Template Script-->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>
