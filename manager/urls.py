@@ -11,4 +11,6 @@ urlpatterns = [
     path('addemployees',views.addemployees,name='addemployees'),
     path('vemployee',views.vemployee,name='vemployee'),
     path('sendemail<int:id>',views.sendemail,name='sendemail'),
+    path('emessage<int:id>',views.emessage,name='emessage'),
+    path('okay<int:id>',views.okay,name='okay'),
 ]
