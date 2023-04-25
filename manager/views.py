@@ -121,11 +121,30 @@ def sendemail(request,id):
     recepient = str(sub)
       
     # get random password pf length 8 with letters, digits, and symbols
-    characters = string.ascii_letters + string.digits + string.punctuation
+    characters = string.ascii_letters + string.digits 
     password = ''.join(random.choice(characters) for i in range(8))
     employees.objects.filter(id=id).update(password=password)
+    employees.objects.filter(id=id).update(sendmail=True)
         
     message = '''Welcome to Office site.
     You can login with this password : ''' +format(password)
     send_mail(subject, message, EMAIL_HOST_USER, [recepient], fail_silently = False)
     return redirect('mhome')
+
+def emessage(request,id):
+    employees.objects.filter(id=id).update(stress=False)
+    employees.objects.filter(id=id).update(message=True)
+    emp=employees.objects.get(id=id)
+    if request.method=="POST":
+        emp.msg=request.POST.get("msg")
+        emp.save()
+        return redirect('mhome')
+    return render(request,"manager/emessage.html")
+
+def okay(request,id):
+    employees.objects.filter(id=id).update(confirm=False)
+    employees.objects.filter(id=id).update(reject=False)
+    employees.objects.filter(id=id).update(okay=True)
+    employees.objects.filter(id=id).update(message=False)
+    return redirect('mhome')
+
